@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Dependency
-      run: apt install -y libopenmpi-dev
+      run: sudo apt install -y libopenmpi-dev
     - name: Build
       run: LD_LIBRARY_PATH=/usr/local/lib cargo build --verbose
     - name: Run tests
