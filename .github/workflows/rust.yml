@@ -19,6 +19,5 @@ jobs:
     - name: Dependency
       run: sudo apt install -y libopenmpi-dev
     - name: Build
-      run: LD_LIBRARY_PATH=/usr/local/lib cargo build --verbose
-    - name: Run tests
-      run: LD_LIBRARY_PATH=/usr/local/lib cargo test --verbose
+      run: cd ior && ./bootstrap && ./configure CFLAGS="-g -O0 -fPIC" && sudo make install && LD_LIBRARY_PATH=/usr/local/lib cargo build --verbose
+
