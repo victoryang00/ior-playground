@@ -1,0 +1,3 @@
+[submodule "ior"]
+	path = ior
+	url = https://github.com/hpc/ior
